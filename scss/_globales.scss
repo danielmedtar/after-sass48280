@@ -62,5 +62,8 @@ footer {
 .btn {
     border: solid 1px $color-secundario;
     width: 200px;
+    text-align: center;
+    padding: 5px $espacioChico;
+    border-radius: 10px;
 }
 

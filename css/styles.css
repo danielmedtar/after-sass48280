@@ -68,6 +68,9 @@ footer .container-redes a {
 .btn, .btn-card {
   border: solid 1px #b2b2b2;
   width: 200px;
+  text-align: center;
+  padding: 5px 20px;
+  border-radius: 10px;
 }
 
 .contenedor-banner {
@@ -107,6 +110,7 @@ footer .container-redes a {
 .btn-card {
   background-color: #000;
   color: yellow;
+  text-decoration: none;
 }
 .btn-card:hover {
   background-color: yellow;
