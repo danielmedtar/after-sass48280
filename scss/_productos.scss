@@ -1,3 +1,81 @@
+/*FILTRO DE PRODUCTOS*/
+.container-labels {
+    @include flex-columna;
+}
+
+.container-cards {
+    @include flex-columna;
+    gap: $espacioMedio;
+    margin-top: $espacioGrande;
+}
+
+@media (min-width: 768px) {
+    .container-cards {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: $espacioChico;
+        justify-items: center;
+    }
+}
+
+@media (min-width: $desktop) {
+    .container-cards {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+}
+
+@media (min-width: $desktopXG) {
+    .container-cards {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+.container-opciones {
+    @include flex-columna;
+    gap: $espacioXchico;
+}
+
+@media (min-width: $tablet) {
+    .container-opciones {
+        flex-direction: row;
+        justify-content: center;
+        gap: $espacioMedio;
+    }
+}
+
+.container-opciones label {
+    @extend .btn;
+    cursor: pointer;
+    padding: 8px 15px;
+    font-size: 14px;
+
+    &:hover {
+        background-color: $color-terciario;
+        color: $color-primario;
+    }
+}
+
+#remeras,
+#pc,
+#todos,
+.card-remeras,
+.card-pc {
+    display: none;
+}
+
+#remeras:checked ~ .container-cards .card-remeras,
+#pc:checked ~ .container-cards .card-pc {
+    display: flex;
+}
+
+#todos {
+    &:checked ~ .container-cards .card-remeras,
+    &:checked ~ .container-cards .card-pc {
+        display: flex;
+    }
+}
+
 .card-body {
     @include flex-columna;
     color: $color-primario
@@ -14,4 +92,15 @@
         color: $color-primario;
         font-weight: 700;
     }
+}
+
+.accordion {
+    margin-top: $espacioMedio;
+}
+
+.accordion-button,
+.accordion-button:not(.collapsed) {
+    background-color: $color-terciario;
+    color: $color-primario;
+    font-weight: 700;
 }

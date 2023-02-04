@@ -49,6 +49,10 @@ h2 {
   text-align: center;
 }
 
+p {
+  font-size: 20px;
+}
+
 .texto-desc {
   margin-top: 20px;
 }
@@ -65,7 +69,7 @@ footer .container-redes a {
   font-size: 40px;
 }
 
-.btn, .btn-card {
+.btn, form .botones-form, .btn-card, .container-opciones label {
   border: solid 1px #b2b2b2;
   width: 200px;
   text-align: center;
@@ -100,6 +104,80 @@ footer .container-redes a {
   font-size: 60px;
 }
 
+/*FILTRO DE PRODUCTOS*/
+.container-labels {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.container-cards {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+  margin-top: 60px;
+}
+
+@media (min-width: 768px) {
+  .container-cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    justify-items: center;
+  }
+}
+@media (min-width: 992px) {
+  .container-cards {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media (min-width: 1200px) {
+  .container-cards {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+.container-opciones {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+@media (min-width: 768px) {
+  .container-opciones {
+    flex-direction: row;
+    justify-content: center;
+    gap: 40px;
+  }
+}
+.container-opciones label {
+  cursor: pointer;
+  padding: 8px 15px;
+  font-size: 14px;
+}
+.container-opciones label:hover {
+  background-color: yellow;
+  color: #000;
+}
+
+#remeras,
+#pc,
+#todos,
+.card-remeras,
+.card-pc {
+  display: none;
+}
+
+#remeras:checked ~ .container-cards .card-remeras,
+#pc:checked ~ .container-cards .card-pc {
+  display: flex;
+}
+
+#todos:checked ~ .container-cards .card-remeras, #todos:checked ~ .container-cards .card-pc {
+  display: flex;
+}
+
 .card-body {
   display: flex;
   flex-direction: column;
@@ -116,6 +194,62 @@ footer .container-redes a {
   background-color: yellow;
   color: #000;
   font-weight: 700;
+}
+
+.accordion {
+  margin-top: 40px;
+}
+
+.accordion-button,
+.accordion-button:not(.collapsed) {
+  background-color: yellow;
+  color: #000;
+  font-weight: 700;
+}
+
+.parrafo-contacto {
+  text-align: center;
+  margin: 40px 0;
+  font-size: 20px;
+}
+
+.main-contacto {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+@media (min-width: 768px) {
+  .main-contacto {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: center;
+    align-items: center;
+  }
+}
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+form .campos {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+form .botones-form {
+  background-color: yellow;
+  color: #000;
+  font-weight: 700;
+}
+form .botones-form:hover {
+  background-color: #000;
+  color: yellow;
+}
+
+iframe {
+  max-width: 100%;
 }
 
 /*# sourceMappingURL=styles.css.map */

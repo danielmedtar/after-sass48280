@@ -75,11 +75,12 @@
     <section>
         <h1>Contáctanos</h1>
         
-        <p>Completa tus datos en el formulario y te contactaremos a la brevedad</p>
+        <p class="parrafo-contacto">Completa tus datos en el formulario y te contactaremos a la brevedad</p>
     </section>
     
-    <main>
+    <main class="main-contacto container">
         <form>
+            <h3 class="text-center">Formulario</h3>
             <div class="campos">
                 <label for="nombreApellido">Nombre y apellido</label>
                 <input type="text" id="nombreApellido" placeholder="Tu nombre completo" required>
@@ -97,17 +98,20 @@
                 <textarea id="mensaje"></textarea>
             </div>
 
-            <input type="submit" value="Enviar formulario">
-            <input type="reset" value="Limpiar">
+            <input type="submit" value="Enviar formulario" class="botones-form">
+            <input type="reset" value="Limpiar" class="botones-form">
         </form>
 
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.934223916743!2d-74.00557598522613!3d40.74147284375004!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c259bf5c1654f3%3A0xc80f9cfce5383d5d!2sGoogle!5e0!3m2!1ses-419!2sar!4v1675367942976!5m2!1ses-419!2sar" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <div class="container-mapa">
+            <h3 class="text-center">¿Donde estamos?</h3>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.934223916743!2d-74.00557598522613!3d40.74147284375004!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c259bf5c1654f3%3A0xc80f9cfce5383d5d!2sGoogle!5e0!3m2!1ses-419!2sar!4v1675367942976!5m2!1ses-419!2sar" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>            
+        </div>
     </main>
 
     <section>
         <h2>¿Quieres saber más?</h2>
 
-        <p>No dudes en navegar por nuestro sitio, mirar los productos, y por supuesto <a href="pages/contacto.html">contactarte con nosotros</a></p>
+        <p class="text-center mt-4">No dudes en navegar por nuestro sitio, mirar los productos, y por supuesto <a href="pages/contacto.html">contactarte con nosotros</a></p>
     </section>
 
     <footer>
