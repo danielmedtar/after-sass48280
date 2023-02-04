@@ -1,0 +1,66 @@
+body {
+    font-family: $fuentePrincipal;
+    background-color: $color-primario;
+    color: $color-secundario;
+}
+
+.nav-link,
+.navbar-nav .nav-link.active {
+    color: $color-secundario;
+
+    &:hover {
+        color: $color-terciario;
+    }
+}
+
+.navbar-toggler {
+    border-color: $color-terciario;
+}
+
+.navbar-toggler-icon {
+    background-color: $color-secundario;
+    padding: $espacioXchico;
+}
+
+.carousel-item img {
+    height: 250px;
+}
+
+@media (min-width: $tablet) {
+    .carousel-item img {
+        height: 70vh;
+    }
+}
+
+@media (min-width: $desktop) {
+    .carousel-item img {
+        height: 80vh;
+    }
+}
+
+h1,
+h2 {
+    margin-top: $espacioMedio;
+    text-align: center;
+}
+
+.texto-desc {
+    margin-top: $espacioChico;
+}
+
+footer {
+    margin-top: $espacioGrande;
+    @include flex-columna;
+
+    .container-redes a {
+        color: $color-terciario;
+        text-decoration: none;
+        font-size: $icono-chico;
+    }
+}
+
+.btn {
+    border: solid 1px $color-secundario;
+    width: 200px;
+}
+

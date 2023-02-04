@@ -1,0 +1,16 @@
+.card-body {
+    @include flex-columna;
+    color: $color-primario
+}
+
+.btn-card {
+    @extend .btn;
+    background-color: $color-primario;
+    color: $color-terciario;
+
+    &:hover {
+        background-color: $color-terciario;
+        color: $color-primario;
+        font-weight: 700;
+    }
+}
